@@ -1,0 +1,159 @@
+# coding:utf-8
+import turtle as t
+
+t.pensize(3)
+t.hideturtle()
+t.colormode(255)
+t.color((255, 155, 192), "pink")
+t.setup(500, 500)
+t.speed(8)
+
+# 轮廓
+t.color("black")
+t.penup()
+t.setheading(180)
+t.forward(150)
+t.seth(270)
+t.forward(100)
+t.pendown()
+
+t.begin_fill()
+t.setheading(90)
+t.forward(150)
+t.circle(-150, 180)
+t.setheading(270)
+t.forward(150)
+t.setheading(180)
+t.forward(300)
+t.end_fill()
+
+# 眼睛轮廓
+t.color((255, 215, 0), "yellow")
+t.penup()
+t.setheading(90)
+t.forward(150)
+t.setheading(0)
+t.forward(40)
+t.pendown()
+
+t.begin_fill()
+t.setheading(160)
+t.circle(-30, 50)
+t.setheading(90)
+t.forward(45)
+t.setheading(305)
+t.circle(140, 50)
+t.setheading(270)
+t.circle(10, 20)
+t.setheading(180)
+t.forward(85)
+t.end_fill()
+
+t.penup()
+t.setheading(0)
+t.forward(220)
+t.pendown()
+t.begin_fill()
+t.setheading(20)
+t.circle(30, 50)
+t.setheading(90)
+t.forward(45)
+t.setheading(235)
+t.circle(-140, 50)
+t.setheading(270)
+t.circle(-10, 20)
+t.setheading(0)
+t.forward(85)
+t.end_fill()
+
+# 眼球
+t.pensize(2)
+# 右眼
+t.color((255, 255, 255), "white")
+t.penup()
+t.setheading(90)
+t.forward(35)
+t.setheading(180)
+t.forward(8)
+t.pendown()
+t.begin_fill()
+t.setheading(228)
+a = 0.4
+for i in range(24):
+    if 0 <= i < 12:
+        a = a + 0.08
+        t.left(3.5)
+        t.forward(a)
+    else:
+        a = a-0.08
+        t.left(3.5)
+        t.forward(a)
+
+t.setheading(48)
+for i in range(24):
+    if 0 <= i < 12:
+        a = a + 0.08
+        t.left(3.5)
+        t.forward(a)
+    else:
+        a = a-0.08
+        t.left(3.5)
+        t.forward(a)
+t.end_fill()
+
+t.penup()
+t.setheading(180)
+t.forward(3)
+t.setheading(270)
+t.forward(5)
+t.pendown()
+t.begin_fill()
+t.color((0, 0, 0), "black")
+t.circle(3)
+t.end_fill()
+
+# 左眼
+t.color((255, 255, 255), "white")
+t.penup()
+t.setheading(90)
+t.forward(5)
+t.setheading(180)
+t.forward(200)
+t.pendown()
+t.begin_fill()
+t.setheading(228)
+a = 0.4
+for i in range(24):
+    if 0 <= i < 12:
+        a = a + 0.08
+        t.left(3.5)
+        t.forward(a)
+    else:
+        a = a-0.08
+        t.left(3.5)
+        t.forward(a)
+
+t.setheading(48)
+for i in range(24):
+    if 0 <= i < 12:
+        a = a + 0.08
+        t.left(3.5)
+        t.forward(a)
+    else:
+        a = a-0.08
+        t.left(3.5)
+        t.forward(a)
+t.end_fill()
+
+t.penup()
+t.setheading(180)
+t.forward(3)
+t.setheading(270)
+t.forward(5)
+t.pendown()
+t.begin_fill()
+t.color((0, 0, 0), "black")
+t.circle(3)
+t.end_fill()
+
+t.done()
